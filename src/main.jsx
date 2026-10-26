@@ -30,7 +30,10 @@ function App() {
       <section className="hero container" id="home">
         <div className="hero-copy">
           <div className="eyebrow"><span className="status-dot"/> COMPUTER SCIENCE · CLOUD COMPUTING</div>
-          <h1>Building for<br/><span className="gradient-text">what’s next.</span></h1>
+          <h1>
+  Turning Ideas<br />
+  <span className="gradient-text">Into Digital Solutions.</span>
+</h1>
           <p className="hero-lede">Hey, I’m <strong>Rushikesh Gadekar</strong> — a computer science student interested in cloud technology, thoughtful web experiences, and data-driven solutions.</p>
           <div className="hero-actions"><a className="button button-primary" href="#projects">Explore my work <ArrowDownRight size={17}/></a><a className="button button-quiet" href="#contact">Let’s connect <ArrowUpRight size={16}/></a></div>
           <div className="hero-meta"><span><MapPin size={14}/> Pune, India</span><span className="meta-divider"/><span>Open to learning & building</span></div>

@@ -2,3 +2,629 @@
 @media(max-width:850px){.hero{grid-template-columns:1fr .8fr;gap:5px}.hero h1{font-size:68px}.hero-visual{transform:scale(.85);margin-inline:-25px}.skill-grid{grid-template-columns:repeat(2,1fr)}.about-stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}.section-heading{align-items:start;flex-direction:column;gap:18px}.heading-note{max-width:560px}.intro-inner{grid-template-columns:1fr 42px;gap:15px;padding-block:28px}.intro-inner .section-index{grid-column:1/-1;margin:0}.intro-inner p{grid-column:1}.intro-inner .round-link{grid-column:2;grid-row:2}.timeline-item{grid-template-columns:48px 135px 1fr;gap:13px}}
 @media(max-width:620px){.container{width:calc(100% - 36px)}.nav{height:68px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;left:0;right:0;top:68px;padding:18px;background:#0b1222;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}.nav-links.open{display:flex}.nav-links>a{padding:13px 10px}.nav-cta{justify-content:center;margin-top:6px}.hero{display:flex;flex-direction:column;align-items:stretch;min-height:unset;padding-top:78px;padding-bottom:90px;gap:10px}.hero h1{font-size:clamp(59px,16vw,82px);letter-spacing:-4px}.hero-lede{font-size:14px}.hero-visual{height:330px;transform:scale(.8);margin:-2px -25px 0}.scroll-cue{bottom:28px}.intro-inner{min-height:unset;padding-block:25px}.intro-inner p{font-size:21px}.section{padding-top:78px;padding-bottom:78px}.section-heading h2{font-size:39px;letter-spacing:-1.7px}.about-stats{grid-template-columns:repeat(2,1fr)}.stat{min-height:115px;padding:19px}.stat-number{font-size:32px}.skill-grid{gap:10px}.skill-card{padding:18px 15px;min-height:210px}.skill-card h3{font-size:16px;margin-top:20px}.tag{font-size:9px;padding:6px 7px}.project-card{padding:19px}.project-content{grid-template-columns:1fr;gap:12px;margin:14px 0 18px}.project-content h3{font-size:21px}.project-desc{font-size:12px}.project-bottom{align-items:flex-end}.project-bottom .tags{max-width:85%}.timeline-item{grid-template-columns:42px 1fr;gap:9px;padding:22px 0}.timeline-icon{grid-row:1/3;width:36px;height:36px}.timeline-date{padding-top:3px;align-self:end}.timeline-main{grid-column:2}.timeline-main h3{margin-top:6px;font-size:16px}.timeline:before{left:17px}.cloud-strip-inner{padding-block:28px;gap:15px}.strip-icon{width:43px;height:43px}.cloud-strip h2{font-size:20px}.cloud-strip p{font-size:11px;max-width:270px}.strip-orbit{display:none}.contact-section h2{font-size:60px}.contact-bottom{margin-top:60px;flex-wrap:wrap;gap:16px}.social-links{margin-left:auto}.back-top{width:100%;text-align:right}.footer>.container{padding-block:20px;gap:12px;flex-wrap:wrap}.footer>.container>span:last-child{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+
+/* ===== BRIGHT PORTFOLIO THEME ===== */
+
+:root {
+  color-scheme: light;
+  --bg: #f7f9ff;
+  --panel: #ffffff;
+  --line: #dce5f3;
+  --muted: #5c6b82;
+  --text: #17243b;
+  --blue: #3978ed;
+  --purple: #8067e8;
+  --mint: #20b99a;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  background: #f7f9ff !important;
+  color: #17243b !important;
+}
+
+.nav-wrap {
+  background: rgba(255, 255, 255, 0.94) !important;
+  border-bottom: 1px solid #dce5f3 !important;
+}
+
+.nav,
+.nav-links a,
+.brand,
+.menu-toggle {
+  color: #17243b !important;
+}
+
+.brand-dot,
+.status-dot,
+.mini-pulse {
+  background: #20b99a !important;
+}
+
+.hero {
+  background: radial-gradient(
+    ellipse at 80% 15%,
+    rgba(122, 157, 255, 0.16),
+    transparent 48%
+  ) !important;
+}
+
+.hero h1 {
+  color: #17243b !important;
+}
+
+.gradient-text {
+  background: linear-gradient(
+    110deg,
+    #8067e8,
+    #3978ed 55%,
+    #20b99a
+  ) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+.hero-lede,
+.hero-meta,
+.intro-inner p {
+  color: #5c6b82 !important;
+}
+
+.button-primary {
+  background: linear-gradient(110deg, #8067e8, #3978ed) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 22px rgba(57, 120, 237, 0.18) !important;
+}
+
+.button-quiet,
+.nav-cta {
+  color: #29415f !important;
+  border-color: #dce5f3 !important;
+  background: #ffffff !important;
+}
+
+.hero-visual {
+  background: radial-gradient(
+    circle,
+    rgba(113, 146, 255, 0.15),
+    transparent 70%
+  ) !important;
+}
+
+.orbit,
+.connection {
+  border-color: rgba(80, 115, 180, 0.18) !important;
+}
+
+.visual-label,
+.node {
+  background: rgba(255, 255, 255, 0.94) !important;
+  color: #29415f !important;
+  border-color: #dce5f3 !important;
+  box-shadow: 0 8px 24px rgba(36, 61, 100, 0.06) !important;
+}
+
+section,
+.intro-band,
+.cloud-strip {
+  color: #17243b;
+}
+
+.section-index,
+.muted,
+.timeline-date {
+  color: #687992 !important;
+}
+
+.skill-card,
+.project-card,
+.timeline-item,
+.stat,
+.contact-card {
+  background: #ffffff !important;
+  color: #17243b !important;
+  border-color: #dce5f3 !important;
+  box-shadow: 0 8px 26px rgba(36, 61, 100, 0.045);
+}
+
+.skill-card p,
+.project-card p,
+.timeline-item p {
+  color: #5c6b82 !important;
+}
+
+a {
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.button,
+.skill-card,
+.project-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-card:hover,
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(57, 120, 237, 0.09);
+}
+
+.footer {
+  color: #5c6b82 !important;
+  border-color: #dce5f3 !important;
+}
+
+/* Keep animations subtle and accessible */
+.orbit-one,
+.orbit-two,
+.orbit-three,
+.connection,
+.spark {
+  animation-duration: 18s !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+
+/* ===== Refined Portfolio Theme ===== */
+
+:root {
+  --bg: #f7f8fc;
+  --panel: #ffffff;
+  --line: #e2e7f0;
+  --muted: #64718a;
+  --text: #17233c;
+  --blue: #4776e6;
+  --purple: #7566dc;
+  --mint: #20a995;
+}
+
+/* Consistent page colors and readable text */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  background: #f7f8fc;
+  color: #17233c;
+}
+
+main {
+  background: #f7f8fc;
+}
+
+section {
+  color: #17233c;
+}
+
+/* Cleaner headings */
+h1,
+h2,
+h3 {
+  color: #17233c;
+  letter-spacing: -0.035em;
+}
+
+.hero h1 {
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+}
+
+.gradient-text {
+  background: linear-gradient(100deg, #7566dc, #4776e6 65%, #20a995);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Softer, consistent hero background */
+.hero {
+  background: linear-gradient(135deg, #f9faff 0%, #f1f5ff 100%);
+}
+
+.hero-lede {
+  color: #64718a;
+}
+
+.hero-lede strong {
+  color: #263650;
+}
+
+/* Consistent section backgrounds */
+.intro-band {
+  background: linear-gradient(90deg, #eef2ff, #f3f7ff);
+}
+
+.skills-section,
+.section,
+.journey-section,
+.contact-section {
+  background: #f7f8fc;
+}
+
+/* Professional cards */
+.skill-card,
+.project-card,
+.timeline-item {
+  background: #ffffff;
+  border: 1px solid #e2e7f0;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(31, 50, 87, 0.045);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.skill-card:hover,
+.project-card:hover,
+.timeline-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(31, 50, 87, 0.09);
+}
+
+.skill-card p,
+.project-card p,
+.section-heading p {
+  color: #64718a;
+}
+
+/* Buttons: one consistent blue accent */
+.button-primary {
+  color: #ffffff;
+  background: #4776e6;
+  border: 1px solid #4776e6;
+  box-shadow: 0 5px 14px rgba(71, 118, 230, 0.16);
+}
+
+.button-primary:hover {
+  background: #365fc5;
+  border-color: #365fc5;
+}
+
+.button-quiet,
+.nav-cta {
+  color: #263650;
+  background: #ffffff;
+  border: 1px solid #dce4f2;
+}
+
+.button-quiet:hover,
+.nav-cta:hover {
+  border-color: #4776e6;
+  color: #365fc5;
+}
+
+/* Make the cloud feature intentional, not mismatched */
+.cloud-strip {
+  background: #17233c;
+  color: #ffffff;
+}
+
+.cloud-strip h2,
+.cloud-strip h3,
+.cloud-strip p {
+  color: #ffffff;
+}
+
+.cloud-strip p {
+  opacity: 0.82;
+}
+
+/* Contact area stays light and readable */
+.contact-section h2 {
+  color: #17233c;
+}
+
+.contact-section p {
+  color: #64718a;
+}
+
+/* Softer navigation */
+.nav-wrap {
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid #e2e7f0;
+  backdrop-filter: blur(14px);
+}
+
+/* Keep animation subtle and comfortable */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* ===== PORTFOLIO READABILITY & SPACING FIX ===== */
+
+:root {
+  --bg: #f7f8fc;
+  --panel: #ffffff;
+  --text: #18243d;
+  --muted: #536581;
+  --line: #dce3ef;
+  --blue: #4776e6;
+  --purple: #7662df;
+  --mint: #19a995;
+}
+
+/* Improve overall readability */
+body {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* Keep the background consistent */
+main,
+section,
+.skills-section,
+.journey-section,
+.contact-section {
+  color: var(--text);
+}
+
+/* Give sections comfortable spacing without excessive gaps */
+section.container,
+section.skills-section,
+section.journey-section,
+section.contact-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+/* Make section headings larger and easier to read */
+.section-heading h2,
+.section-heading h2 span {
+  font-size: clamp(34px, 3.5vw, 48px);
+  line-height: 1.2;
+  letter-spacing: -1.2px;
+}
+
+/* Improve paragraph contrast */
+p,
+.about-copy,
+.hero-lede,
+.section-heading p {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+/* Make skill cards more readable */
+.skill-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 28px 24px;
+  min-height: 210px;
+  box-shadow: 0 8px 24px rgba(24, 36, 61, 0.045);
+}
+
+.skill-card h3 {
+  color: var(--text);
+  font-size: 19px;
+  margin-top: 18px;
+  margin-bottom: 14px;
+}
+
+/* Make skill tags larger and clearer */
+.skill-card span,
+.skill-card .skill-tag {
+  font-size: 13px;
+  color: #465875;
+  line-height: 1.6;
+}
+
+/* Improve project cards */
+.project-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 26px rgba(24, 36, 61, 0.045);
+}
+
+.project-card h3 {
+  color: var(--text);
+  font-size: 24px;
+  line-height: 1.35;
+}
+
+.project-card p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Make the statistics readable */
+.about-stats {
+  margin-top: 36px;
+}
+
+.stat {
+  padding: 28px;
+}
+
+.stat-number,
+.stat-label {
+  color: var(--text);
+}
+
+.stat-number {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.stat-label {
+  font-size: 13px;
+}
+
+/* Improve the dark cloud-focus banner */
+.cloud-strip {
+  background: #17243c;
+  color: #ffffff;
+}
+
+.cloud-strip h2,
+.cloud-strip p,
+.cloud-strip .strip-description {
+  color: #ffffff;
+}
+
+/* Keep navigation clear */
+.nav {
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-links a {
+  color: #283750;
+  font-size: 14px;
+}
+
+/* Improve button readability */
+.button {
+  font-size: 14px;
+  padding: 14px 20px;
+}
+
+/* Prevent tiny text on smaller screens */
+@media (max-width: 768px) {
+  section.container,
+  section.skills-section,
+  section.journey-section,
+  section.contact-section {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+
+  .skill-card {
+    padding: 22px;
+  }
+
+  .project-card {
+    padding: 22px;
+  }
+
+  .section-heading h2,
+  .section-heading h2 span {
+    font-size: clamp(30px, 7vw, 40px);
+  }
+}
+
+/* ===== FIX LOW-CONTRAST TEXT THROUGHOUT THE PORTFOLIO ===== */
+
+/* Make project titles and descriptions clear */
+.project-card h3,
+.project-card .project-title {
+  color: #18243d !important;
+}
+
+.project-card p,
+.project-card .project-description {
+  color: #465875 !important;
+}
+
+/* Make project technology tags readable */
+.project-card span,
+.project-card .project-tech,
+.project-card .tech-tag {
+  color: #425574 !important;
+  background-color: #f0f4ff;
+  border-color: #dce5f5;
+}
+
+/* Improve project labels */
+.project-number,
+.project-card .project-label,
+.project-card .project-subtitle {
+  color: #536887 !important;
+}
+
+/* Make the email address visible */
+.contact-section a,
+.contact-section a[href^="mailto:"],
+.contact-section .email-link {
+  color: #365fc5 !important;
+  opacity: 1 !important;
+  font-weight: 600;
+  text-decoration-color: #9aabed;
+}
+
+/* Improve footer text and icons */
+footer,
+footer a,
+footer p,
+footer span {
+  opacity: 1;
+}
+
+footer p,
+footer .footer-note {
+  color: #536581 !important;
+}
+
+footer a {
+  color: #425574 !important;
+}
+
+/* Improve small labels without overpowering the design */
+.section-index,
+.project-number,
+.timeline-date {
+  color: #526b91 !important;
+}
+
+/* Make skill tags readable */
+.skill-card span,
+.skill-card .skill-tag {
+  color: #425574 !important;
+  background-color: #f5f7ff;
+  border-color: #e0e6f3;
+}
+
+/* Keep the design elegant and consistent */
+.project-card,
+.skill-card {
+  background: #ffffff;
+  border-color: #dce3ef;
+}
+
+/* Ensure muted text remains readable */
+.about-copy,
+.hero-lede,
+.section-heading p,
+.project-card p {
+  color: #536581 !important;
+}
+
+/* Keep the dark footer text visible */
+footer .brand,
+footer .brand span,
+footer .brand-mark {
+  color: #e6ecfa !important;
+}
+
+footer .brand {
+  opacity: 1;
+}
